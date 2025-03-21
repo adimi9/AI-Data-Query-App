@@ -71,3 +71,36 @@ To maintain the focus and relevance of user queries, the app checks if the user�
 **How it works**:
 - The app uses a combination of predefined rules and OpenAI’s GPT models to analyse whether the user’s query is related to the uploaded data.
 - If the question is unrelated, the app alerts the user that the query doesn’t match the dataset, helping users stay on track and avoid confusion.
+
+---
+
+## **Implementation 🚀**
+### **1. Clone the Repository**  
+```sh
+git clone https://github.com/your-username/ai-data-query-app.git  
+cd ai-data-query-app
+```
+
+### **2. Install Dependencies**  
+Ensure you have Python installed, then run:
+```sh
+pip install -r requirements.txt  
+```
+
+### **3. Set Up Environment Variables** 
+Create a .env file in the project root and add your OpenAI API key:
+```sh
+echo "OPENAI_API_KEY=your_openai_api_key_here" > .env  
+```
+
+### **4. Set Up Environment Variables** 
+Start the application with:
+```sh
+streamlit run app.py
+```
+
+
+
+
+
+
