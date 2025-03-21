@@ -74,26 +74,26 @@ To maintain the focus and relevance of user queries, the app checks if the user�
 
 ---
 
-## **Implementation 🚀**
-### **1. Clone the Repository**  
+### **Implementation 🚀**
+#### **1. Clone the Repository**  
 ```sh
 git clone https://github.com/your-username/ai-data-query-app.git  
 cd ai-data-query-app
 ```
 
-### **2. Install Dependencies**  
+#### **2. Install Dependencies**  
 Ensure you have Python installed, then run:
 ```sh
 pip install -r requirements.txt  
 ```
 
-### **3. Set Up Environment Variables** 
+#### **3. Set Up Environment Variables** 
 Create a .env file in the project root and add your OpenAI API key:
 ```sh
 echo "OPENAI_API_KEY=your_openai_api_key_here" > .env  
 ```
 
-### **4. Set Up Environment Variables** 
+#### **4. Set Up Environment Variables** 
 Start the application with:
 ```sh
 streamlit run app.py
