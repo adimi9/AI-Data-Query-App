@@ -3,4 +3,4 @@ pandas
 pandasai>=3.0.0b0
 pandasai-openai
 pandasai-docker
-lida=0.0.14
+lida==0.0.14
