@@ -1,7 +1,7 @@
 # AI-Powered Data Query App 📊
 
 ## Overview
-This app allows users to upload CSV/Excel files and interact with them through AI-powered queries and visualizations. The app supports multiple datasets, lets you explore the data by viewing top N rows, and provides insights through questions and answers powered by PandasAI with OpenAI. Visualizations are handled using Microsoft LIDA.
+This app allows users to upload CSV/Excel files and interact with them through AI-powered queries and visualisations. The app supports multiple datasets, lets you explore the data by viewing top N rows, and provides insights through questions and answers powered by PandasAI with OpenAI. Visualisations are handled using Microsoft LIDA.
 
 ---
 
@@ -14,7 +14,7 @@ Users can upload multiple CSV or Excel files. The app uses Pandas to load and pr
 Select which dataset to view and define how many top rows to display. The number of rows is adjustable via a Streamlit slider, and Pandas handles the data display.
 
 ### 3. **Ask Questions & Get Answers 💬**
-Once the data is uploaded, users can ask questions, which are answered using PandasAI powered by OpenAI. For visualizations, Microsoft LIDA is used to generate interactive charts. Users can easily query any dataset via a dropdown menu.
+Once the data is uploaded, users can ask questions, which are answered using PandasAI powered by OpenAI. For visualisations, Microsoft LIDA is used to generate interactive charts. Users can easily query any dataset via a dropdown menu.
 
 ### 4. **Guardrails for Safe & Relevant Queries 🚧**
 The app includes built-in guardrails to ensure safe and relevant interactions. These include:
@@ -33,7 +33,7 @@ Users can view and reuse previous queries. The app tracks this history using Str
 - **Pandas**: Used for reading and processing uploaded datasets.
 - **Streamlit**: Powers the app interface, including file uploads, data display, dropdowns, and session state for history management.
 - **PandasAI (OpenAI)**: Handles AI-powered question answering.
-- **Microsoft LIDA**: Generates interactive visualizations.
+- **Microsoft LIDA**: Generates interactive visualisations.
 - **Python**: Handles the backend logic, security features, and input filtering.
 
 ---
@@ -69,5 +69,5 @@ To protect against potentially harmful inputs such as SQL injection, XSS attacks
 To maintain the focus and relevance of user queries, the app checks if the user’s input pertains to the uploaded dataset. 
 
 **How it works**:
-- The app uses a combination of predefined rules and OpenAI’s GPT models to analyze whether the user’s query is related to the uploaded data.
+- The app uses a combination of predefined rules and OpenAI’s GPT models to analyse whether the user’s query is related to the uploaded data.
 - If the question is unrelated, the app alerts the user that the query doesn’t match the dataset, helping users stay on track and avoid confusion.
