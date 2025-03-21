@@ -58,15 +58,15 @@ except Exception as e:
 # -- Helper Functions --
 def upload_datasets():
     """
-    Displays the file uploader widget to allow users to upload multiple CSV or XLSX files.
+    Displays the file uploader widget to allow users to upload multiple CSV or XLS files.
     Loads the uploaded datasets into the session state and returns them as a dictionary.
 
     Returns:
         datasets (dict): A dictionary where the keys are filenames and the values are DataFrames.
     """
 
-    # Display file uploader widget to allow users to upload multiple CSV or XLSX files
-    uploaded_files = st.file_uploader("Upload datasets (CSV or XLSX)", type=["csv", "xlsx"], accept_multiple_files=True)
+    # Display file uploader widget to allow users to upload multiple CSV or XLS files
+    uploaded_files = st.file_uploader("Upload datasets (CSV or XLS)", type=["csv", "xls"], accept_multiple_files=True)
     
     # Initialise an empty dictionary to store the datasets after loading
     datasets = {}
@@ -90,12 +90,12 @@ def upload_datasets():
                     # Check if the uploaded file is a CSV and read it into a DataFrame
                     if uploaded_file.name.endswith('.csv'):
                         df = pd.read_csv(uploaded_file)
-                    # Check if the uploaded file is an XLSX and read it into a DataFrame
-                    elif uploaded_file.name.endswith('.xlsx'):
+                    # Check if the uploaded file is an XLS and read it into a DataFrame
+                    elif uploaded_file.name.endswith('.xls'):
                             df = pd.read_excel(uploaded_file)
                     # If the file type is unsupported, display a warning message
                     else:
-                        st.warning(f"Unsupported file type: {uploaded_file.name}. Please upload CSV or XLSX.")
+                        st.warning(f"Unsupported file type: {uploaded_file.name}. Please upload CSV or XLS.")
                         continue
 
                     # Add the loaded DataFrame to the datasets dictionary with the filename as the key
