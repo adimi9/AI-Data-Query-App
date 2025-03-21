@@ -2,8 +2,6 @@
 import os
 import sys
 import asyncio
-from dotenv import load_dotenv  # Import dotenv
-load_dotenv()   # Load environment variables from .env
 
 # PandasAI imports
 import streamlit as st

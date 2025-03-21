@@ -1,8 +1,6 @@
 import streamlit as st
 from openai import OpenAI
 import os
-from dotenv import load_dotenv  
-load_dotenv()
 
 async def check_for_irrelevant_input(user_request, df):
     """
