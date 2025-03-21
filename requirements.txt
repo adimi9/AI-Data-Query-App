@@ -1,0 +1,7 @@
+streamlit
+pandas
+pandasai
+pandasai-openai
+pandasai-docker
+guardrails
+lida 
