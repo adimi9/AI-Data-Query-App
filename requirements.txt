@@ -3,5 +3,4 @@ pandas
 pandasai>=3.0.0b0
 pandasai-openai
 pandasai-docker
-guardrails
 lida 
