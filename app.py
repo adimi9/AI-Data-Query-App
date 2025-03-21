@@ -16,7 +16,7 @@ from pandasai import Agent
 from pandasai_docker import DockerSandbox
 from guardrails.guardrails import execute_input_guardrails
 
-# Lida imports
+# LIDA imports
 from lida import llm, Manager, TextGenerationConfig
 from PIL import Image
 import io
@@ -51,8 +51,8 @@ try:
     sandbox.start()
 except Exception as e:
     # Handle initialisation errors and exit the application if necessary
-    st.error(f"Error initialising OpenAI client: {e}", icon="🚨")
-    sys.exit(f"Error initialising OpenAI client: {e}")
+    st.error(f"Oops! An error occurred while initialising the system. Please try again later.", icon="🚨")
+    sys.exit(f"Error initialising OpenAI client / Configuring PandaAI / : {e}")
 
 
 # -- Helper Functions --
@@ -102,7 +102,7 @@ def upload_datasets():
                     datasets[uploaded_file.name] = df
                     st.success(f"Dataset '{uploaded_file.name}' uploaded successfully.")
                 except Exception as e:
-                    st.error(f"Error reading file '{uploaded_file.name}': {e}")
+                    st.error("Oops! There was an issue uploading your file. Please try again.")
 
     # Return uploaded datasets
     return datasets
@@ -127,7 +127,7 @@ def process_query(data, prompt: str):
         response = agent.chat(prompt)
         return response
     except Exception as e:
-        return f"Error processing query with PandasAI: {e}"
+        return f"Oops! An error occurred while processing your query. Please try again later."
 
 def visualisation_lida(data, prompt: str):
     """
@@ -250,7 +250,7 @@ async def main():
 
     # If a dataset is selected, display its name; otherwise, display a message indicating no dataset is selected
     if selected_df is not None:
-        st.write(f"Selected Dataset: **{selected_dataset}**)")
+        st.write(f"Selected Dataset: **{selected_dataset}**")
     else:
         st.write("No dataset selected.")
 
@@ -367,7 +367,7 @@ async def main():
                         })
 
             else:
-                st.write("Error: Could not initialize PandasAI or no dataset selected.")
+                st.write("Oops! Could not initialise the data query system or no dataset selected. Please try again.")
 
             st.divider() 
 
