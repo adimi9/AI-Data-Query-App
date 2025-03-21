@@ -74,7 +74,7 @@ To maintain the focus and relevance of user queries, the app checks if the user�
 
 ---
 
-### **Implementation 🚀**
+## **Implementation 🚀**
 #### **1. Clone the Repository**  
 ```sh
 git clone https://github.com/your-username/ai-data-query-app.git  
